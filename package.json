@@ -93,6 +93,11 @@
 			"svelte": "./dist/Select.svelte",
 			"default": "./dist/Select.svelte"
 		},
+		"./Spinner.svelte": {
+			"types": "./dist/Spinner.svelte.d.ts",
+			"svelte": "./dist/Spinner.svelte",
+			"default": "./dist/Spinner.svelte"
+		},
 		"./Table.svelte": {
 			"types": "./dist/Table.svelte.d.ts",
 			"svelte": "./dist/Table.svelte",
