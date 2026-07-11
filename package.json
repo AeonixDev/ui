@@ -108,6 +108,11 @@
 			"svelte": "./dist/Select.svelte",
 			"default": "./dist/Select.svelte"
 		},
+		"./Skeleton.svelte": {
+			"types": "./dist/Skeleton.svelte.d.ts",
+			"svelte": "./dist/Skeleton.svelte",
+			"default": "./dist/Skeleton.svelte"
+		},
 		"./Spinner.svelte": {
 			"types": "./dist/Spinner.svelte.d.ts",
 			"svelte": "./dist/Spinner.svelte",

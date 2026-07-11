@@ -20,6 +20,7 @@
 @source "./NavItem.svelte";
 @source "./Progress.svelte";
 @source "./Select.svelte";
+@source "./Skeleton.svelte";
 @source "./Spinner.svelte";
 @source "./Table.svelte";
 @source "./Textarea.svelte";
