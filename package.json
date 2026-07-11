@@ -53,6 +53,11 @@
 			"svelte": "./dist/ButtonGroup.svelte",
 			"default": "./dist/ButtonGroup.svelte"
 		},
+		"./Card.svelte": {
+			"types": "./dist/Card.svelte.d.ts",
+			"svelte": "./dist/Card.svelte",
+			"default": "./dist/Card.svelte"
+		},
 		"./Checkbox.svelte": {
 			"types": "./dist/Checkbox.svelte.d.ts",
 			"svelte": "./dist/Checkbox.svelte",
