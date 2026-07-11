@@ -37,6 +37,31 @@
 			"svelte": "./dist/ButtonGroup.svelte",
 			"default": "./dist/ButtonGroup.svelte"
 		},
+		"./Checkbox.svelte": {
+			"types": "./dist/Checkbox.svelte.d.ts",
+			"svelte": "./dist/Checkbox.svelte",
+			"default": "./dist/Checkbox.svelte"
+		},
+		"./Form.svelte": {
+			"types": "./dist/Form.svelte.d.ts",
+			"svelte": "./dist/Form.svelte",
+			"default": "./dist/Form.svelte"
+		},
+		"./Input.svelte": {
+			"types": "./dist/Input.svelte.d.ts",
+			"svelte": "./dist/Input.svelte",
+			"default": "./dist/Input.svelte"
+		},
+		"./Select.svelte": {
+			"types": "./dist/Select.svelte.d.ts",
+			"svelte": "./dist/Select.svelte",
+			"default": "./dist/Select.svelte"
+		},
+		"./Textarea.svelte": {
+			"types": "./dist/Textarea.svelte.d.ts",
+			"svelte": "./dist/Textarea.svelte",
+			"default": "./dist/Textarea.svelte"
+		},
 		"./package.json": "./package.json",
 		"./styles.css": "./dist/styles.css",
 		"./types": {

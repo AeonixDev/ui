@@ -4,6 +4,12 @@
 @source "./Button.svelte";
 @source "./ButtonGroup.svelte";
 @source "./Badge.svelte";
+@source "./Checkbox.svelte";
+@source "./Form.svelte";
+@source "./FormControl.ts";
+@source "./Input.svelte";
+@source "./Select.svelte";
+@source "./Textarea.svelte";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
