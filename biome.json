@@ -1,0 +1,15 @@
+{
+	"extends": ["@aeonixdev/configs/biome"],
+	"overrides": [
+		{
+			"assist": {
+				"actions": {
+					"source": {
+						"useSortedKeys": "off"
+					}
+				}
+			},
+			"includes": ["package.json"]
+		}
+	]
+}

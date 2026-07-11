@@ -1,0 +1,4 @@
+@import "../src/lib/styles.css";
+
+@source "../src/**/*.stories.{svelte,ts}";
+@source "./**/*.{svelte,ts}";

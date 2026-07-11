@@ -1,0 +1,67 @@
+{
+	"dependencies": {
+		"class-variance-authority": "0.7.1"
+	},
+	"description": "Svelte UI components for AeonixDev projects",
+	"devDependencies": {
+		"@aeonixdev/configs": "github:AeonixDev/configs",
+		"@storybook/addon-docs": "10.4.6",
+		"@storybook/addon-svelte-csf": "5.1.2",
+		"@storybook/svelte": "10.4.6",
+		"@storybook/svelte-vite": "10.4.6",
+		"@sveltejs/package": "2.5.8",
+		"@sveltejs/vite-plugin-svelte": "7.1.4",
+		"@tailwindcss/cli": "4.3.2",
+		"@tailwindcss/vite": "4.3.2",
+		"@tsconfig/svelte": "5.0.8",
+		"storybook": "10.4.6",
+		"svelte": "5.56.4",
+		"svelte-check": "4.7.1",
+		"tailwindcss": "4.3.2",
+		"typescript": "6.0.3",
+		"vite": "8.1.3"
+	},
+	"exports": {
+		"./Badge.svelte": {
+			"types": "./dist/Badge.svelte.d.ts",
+			"svelte": "./dist/Badge.svelte",
+			"default": "./dist/Badge.svelte"
+		},
+		"./Button.svelte": {
+			"types": "./dist/Button.svelte.d.ts",
+			"svelte": "./dist/Button.svelte",
+			"default": "./dist/Button.svelte"
+		},
+		"./package.json": "./package.json",
+		"./styles.css": "./dist/styles.css",
+		"./types": {
+			"types": "./dist/types.d.ts",
+			"default": "./dist/types.js"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"name": "@aeonixdev/ui",
+	"packageManager": "bun@1.3.14",
+	"peerDependencies": {
+		"svelte": "5.56.4"
+	},
+	"scripts": {
+		"build": "bun run package",
+		"build-storybook": "storybook build",
+		"build:styles": "tailwindcss -i ./src/lib/styles.css -o ./dist/styles.css --minify",
+		"check": "svelte-check --tsconfig ./tsconfig.json",
+		"clean:package-output": "bun scripts/remove-story-files.mjs",
+		"format": "biome check --write .",
+		"format:unsafe": "biome check --write --unsafe .",
+		"package": "svelte-package && bun run clean:package-output && bun run build:styles",
+		"prepack": "bun run package",
+		"storybook": "storybook dev -p 21000 --no-open"
+	},
+	"sideEffects": [
+		"**/*.css"
+	],
+	"type": "module",
+	"version": "0.0.0-alpha.0"
+}

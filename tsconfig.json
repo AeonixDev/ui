@@ -1,0 +1,14 @@
+{
+	"compilerOptions": {
+		"isolatedModules": true,
+		"module": "ESNext",
+		"moduleResolution": "Bundler",
+		"skipLibCheck": true,
+		"strict": true,
+		"target": "ES2022",
+		"types": ["svelte", "vite/client"],
+		"verbatimModuleSyntax": true
+	},
+	"extends": "@tsconfig/svelte/tsconfig.json",
+	"include": ["src/**/*", ".storybook/**/*", "*.ts", "*.js", "*.cjs", "svelte.config.js", "vite.config.ts"]
+}
