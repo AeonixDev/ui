@@ -32,6 +32,11 @@
 			"svelte": "./dist/Button.svelte",
 			"default": "./dist/Button.svelte"
 		},
+		"./ButtonGroup.svelte": {
+			"types": "./dist/ButtonGroup.svelte.d.ts",
+			"svelte": "./dist/ButtonGroup.svelte",
+			"default": "./dist/ButtonGroup.svelte"
+		},
 		"./package.json": "./package.json",
 		"./styles.css": "./dist/styles.css",
 		"./types": {

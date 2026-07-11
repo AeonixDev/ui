@@ -2,6 +2,7 @@
 @import "tailwindcss/utilities";
 
 @source "./Button.svelte";
+@source "./ButtonGroup.svelte";
 @source "./Badge.svelte";
 
 @custom-variant dark (&:where(.dark, .dark *));

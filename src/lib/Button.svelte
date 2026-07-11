@@ -1,7 +1,9 @@
 <script lang="ts" module>
   import { cva } from 'class-variance-authority';
   import type { Snippet } from 'svelte';
+  import { getContext } from 'svelte';
   import type { HTMLButtonAttributes } from 'svelte/elements';
+  import { buttonGroupContextKey, type ButtonGroupContext } from './ButtonGroup.js';
   import type { Size, Variant } from './types.js';
 
   const variantClasses = {
@@ -33,29 +35,33 @@
   type NativeButtonProps = Omit<HTMLButtonAttributes, 'class' | 'type'>;
 
   export type ButtonProps = NativeButtonProps & {
+    children?: Snippet;
     class?: string;
+    size?: Size;
     type?: 'button' | 'submit' | 'reset';
     variant?: Variant;
-    size?: Size;
-    children?: Snippet;
   };
 </script>
 
 <script lang="ts">
+  const buttonGroup = getContext<ButtonGroupContext | undefined>(buttonGroupContextKey);
+
   let {
-    class: className = '',
-    type = 'button',
-    variant = 'primary',
-    size = 'md',
-    disabled = false,
     children,
+    class: className = '',
+    disabled,
+    size = 'md',
+    type = 'button',
+    variant,
     ...restProps
   }: ButtonProps = $props();
 
-  const classes = $derived(buttonVariants({ class: className, size, variant }));
+  const effectiveVariant = $derived(variant ?? buttonGroup?.variant ?? 'primary');
+  const effectiveDisabled = $derived(buttonGroup?.disabled ?? disabled ?? false);
+  const classes = $derived(buttonVariants({ class: className, size, variant: effectiveVariant }));
 </script>
 
-<button {...restProps} {type} {disabled} class={classes}>
+<button {...restProps} class={classes} disabled={effectiveDisabled} {type}>
   {#if children}
     {@render children()}
   {/if}
