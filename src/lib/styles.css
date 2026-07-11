@@ -6,6 +6,7 @@
 @source "./ButtonGroup.svelte";
 @source "./Badge.svelte";
 @source "./Checkbox.svelte";
+@source "./Divider.svelte";
 @source "./Form.svelte";
 @source "./FormControl.ts";
 @source "./Input.svelte";

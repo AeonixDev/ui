@@ -3,6 +3,7 @@
 	import type { Snippet } from "svelte";
 	import { getContext } from "svelte";
 	import type { HTMLAnchorAttributes, HTMLAttributes, HTMLButtonAttributes } from "svelte/elements";
+	import Divider from "./Divider.svelte";
 	import { navContextKey, type NavContext } from "./Nav.js";
 
 	const navItemVariants = cva("box-border min-w-0 max-w-full", {
@@ -49,16 +50,7 @@
 				type: ["link", "button"],
 				variant: "warning",
 			},
-			{ class: "bg-foreground/20", type: "divider", variant: "default" },
-			{ class: "bg-error-foreground/30", type: "divider", variant: "error" },
-			{ class: "bg-info-foreground/30", type: "divider", variant: "info" },
-			{ class: "bg-primary-foreground/30", type: "divider", variant: "primary" },
-			{ class: "bg-secondary-foreground/30", type: "divider", variant: "secondary" },
-			{ class: "bg-success-foreground/30", type: "divider", variant: "success" },
-			{ class: "bg-warning-foreground/30", type: "divider", variant: "warning" },
-			{ class: "h-6 w-px", mode: "horizontal", type: "divider" },
 			{ class: "justify-start", mode: "vertical", type: "button" },
-			{ class: "h-px", mode: "vertical", type: "divider" },
 		],
 		defaultVariants: {
 			mode: "horizontal",
@@ -73,7 +65,7 @@
 			type: {
 				button:
 					"inline-flex h-auto cursor-pointer appearance-none items-center overflow-hidden text-ellipsis whitespace-nowrap rounded-md border-0 bg-transparent px-3 py-2 font-medium text-sm shadow-none transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50",
-				divider: "m-0 shrink-0 border-0",
+				divider: null,
 				link: "inline-flex items-center overflow-hidden text-ellipsis whitespace-nowrap rounded-md px-3 py-2 font-medium text-sm no-underline transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1",
 			},
 			variant: {
@@ -102,7 +94,7 @@
 		type: "button";
 	};
 
-	export type NavDividerItemProps = Omit<HTMLAttributes<HTMLHRElement>, "class"> & {
+	export type NavDividerItemProps = Omit<HTMLAttributes<HTMLHRElement>, "aria-orientation" | "class"> & {
 		children?: never;
 		class?: string;
 		type: "divider";
@@ -142,5 +134,5 @@
 		{/if}
 	</button>
 {:else}
-	<hr {...dividerProps} aria-orientation={dividerProps["aria-orientation"] ?? dividerOrientation} class={classes} />
+	<Divider {...dividerProps} class={classes} orientation={dividerOrientation} {variant} />
 {/if}

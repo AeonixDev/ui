@@ -48,6 +48,11 @@
 			"svelte": "./dist/Checkbox.svelte",
 			"default": "./dist/Checkbox.svelte"
 		},
+		"./Divider.svelte": {
+			"types": "./dist/Divider.svelte.d.ts",
+			"svelte": "./dist/Divider.svelte",
+			"default": "./dist/Divider.svelte"
+		},
 		"./Form.svelte": {
 			"types": "./dist/Form.svelte.d.ts",
 			"svelte": "./dist/Form.svelte",
