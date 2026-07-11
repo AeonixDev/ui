@@ -17,7 +17,7 @@
       disabled: false,
       size: 'md',
       type: 'button',
-      variant: 'primary'
+      variant: 'default'
     },
     argTypes: {
       disabled: {
@@ -52,11 +52,11 @@
       variant: {
         control: 'inline-radio',
         description: 'Visual emphasis for the button.',
-        options: ['primary', 'secondary'],
+        options: ['default', 'primary', 'secondary', 'error', 'info', 'success', 'warning'],
         table: {
           category: 'Appearance',
-          defaultValue: { summary: "'primary'" },
-          type: { summary: "'primary' | 'secondary'" }
+          defaultValue: { summary: "'default'" },
+          type: { summary: 'Variant' }
         }
       }
     },
@@ -81,7 +81,15 @@
   <Button variant={args.variant} size={args.size} type={args.type} disabled={args.disabled}>Button</Button>
 {/snippet}
 
-<Story name="Primary">
+<Story name="Default">
+  {#snippet template(args: ButtonStoryArgs)}
+    <Button variant={args.variant} size={args.size} type={args.type} disabled={args.disabled}>
+      Default button
+    </Button>
+  {/snippet}
+</Story>
+
+<Story name="Primary" args={{ variant: 'primary' }}>
   {#snippet template(args: ButtonStoryArgs)}
     <Button variant={args.variant} size={args.size} type={args.type} disabled={args.disabled}>
       Primary button

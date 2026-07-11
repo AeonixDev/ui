@@ -23,6 +23,11 @@
 		"vite": "8.1.4"
 	},
 	"exports": {
+		"./Avatar.svelte": {
+			"types": "./dist/Avatar.svelte.d.ts",
+			"svelte": "./dist/Avatar.svelte",
+			"default": "./dist/Avatar.svelte"
+		},
 		"./Badge.svelte": {
 			"types": "./dist/Badge.svelte.d.ts",
 			"svelte": "./dist/Badge.svelte",
@@ -32,6 +37,76 @@
 			"types": "./dist/Button.svelte.d.ts",
 			"svelte": "./dist/Button.svelte",
 			"default": "./dist/Button.svelte"
+		},
+		"./ButtonGroup.svelte": {
+			"types": "./dist/ButtonGroup.svelte.d.ts",
+			"svelte": "./dist/ButtonGroup.svelte",
+			"default": "./dist/ButtonGroup.svelte"
+		},
+		"./Checkbox.svelte": {
+			"types": "./dist/Checkbox.svelte.d.ts",
+			"svelte": "./dist/Checkbox.svelte",
+			"default": "./dist/Checkbox.svelte"
+		},
+		"./Form.svelte": {
+			"types": "./dist/Form.svelte.d.ts",
+			"svelte": "./dist/Form.svelte",
+			"default": "./dist/Form.svelte"
+		},
+		"./Input.svelte": {
+			"types": "./dist/Input.svelte.d.ts",
+			"svelte": "./dist/Input.svelte",
+			"default": "./dist/Input.svelte"
+		},
+		"./Kbd.svelte": {
+			"types": "./dist/Kbd.svelte.d.ts",
+			"svelte": "./dist/Kbd.svelte",
+			"default": "./dist/Kbd.svelte"
+		},
+		"./Message.svelte": {
+			"types": "./dist/Message.svelte.d.ts",
+			"svelte": "./dist/Message.svelte",
+			"default": "./dist/Message.svelte"
+		},
+		"./Nav.svelte": {
+			"types": "./dist/Nav.svelte.d.ts",
+			"svelte": "./dist/Nav.svelte",
+			"default": "./dist/Nav.svelte"
+		},
+		"./NavGroup.svelte": {
+			"types": "./dist/NavGroup.svelte.d.ts",
+			"svelte": "./dist/NavGroup.svelte",
+			"default": "./dist/NavGroup.svelte"
+		},
+		"./NavItem.svelte": {
+			"types": "./dist/NavItem.svelte.d.ts",
+			"svelte": "./dist/NavItem.svelte",
+			"default": "./dist/NavItem.svelte"
+		},
+		"./Select.svelte": {
+			"types": "./dist/Select.svelte.d.ts",
+			"svelte": "./dist/Select.svelte",
+			"default": "./dist/Select.svelte"
+		},
+		"./Table.svelte": {
+			"types": "./dist/Table.svelte.d.ts",
+			"svelte": "./dist/Table.svelte",
+			"default": "./dist/Table.svelte"
+		},
+		"./Textarea.svelte": {
+			"types": "./dist/Textarea.svelte.d.ts",
+			"svelte": "./dist/Textarea.svelte",
+			"default": "./dist/Textarea.svelte"
+		},
+		"./Toast.svelte": {
+			"types": "./dist/Toast.svelte.d.ts",
+			"svelte": "./dist/Toast.svelte",
+			"default": "./dist/Toast.svelte"
+		},
+		"./ToastContainer.svelte": {
+			"types": "./dist/ToastContainer.svelte.d.ts",
+			"svelte": "./dist/ToastContainer.svelte",
+			"default": "./dist/ToastContainer.svelte"
 		},
 		"./package.json": "./package.json",
 		"./styles.css": "./dist/styles.css",
