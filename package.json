@@ -98,6 +98,11 @@
 			"svelte": "./dist/NavItem.svelte",
 			"default": "./dist/NavItem.svelte"
 		},
+		"./Progress.svelte": {
+			"types": "./dist/Progress.svelte.d.ts",
+			"svelte": "./dist/Progress.svelte",
+			"default": "./dist/Progress.svelte"
+		},
 		"./Select.svelte": {
 			"types": "./dist/Select.svelte.d.ts",
 			"svelte": "./dist/Select.svelte",

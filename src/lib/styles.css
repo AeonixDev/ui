@@ -18,6 +18,7 @@
 @source "./Nav.ts";
 @source "./NavGroup.svelte";
 @source "./NavItem.svelte";
+@source "./Progress.svelte";
 @source "./Select.svelte";
 @source "./Spinner.svelte";
 @source "./Table.svelte";
