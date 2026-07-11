@@ -15,6 +15,9 @@
 @source "./Select.svelte";
 @source "./Table.svelte";
 @source "./Textarea.svelte";
+@source "./Toast.svelte";
+@source "./Toast.ts";
+@source "./ToastContainer.svelte";
 
 @custom-variant dark (&:where(.dark, .dark *));
 

@@ -82,6 +82,16 @@
 			"svelte": "./dist/Textarea.svelte",
 			"default": "./dist/Textarea.svelte"
 		},
+		"./Toast.svelte": {
+			"types": "./dist/Toast.svelte.d.ts",
+			"svelte": "./dist/Toast.svelte",
+			"default": "./dist/Toast.svelte"
+		},
+		"./ToastContainer.svelte": {
+			"types": "./dist/ToastContainer.svelte.d.ts",
+			"svelte": "./dist/ToastContainer.svelte",
+			"default": "./dist/ToastContainer.svelte"
+		},
 		"./package.json": "./package.json",
 		"./styles.css": "./dist/styles.css",
 		"./types": {
