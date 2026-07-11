@@ -72,6 +72,11 @@
 			"svelte": "./dist/Select.svelte",
 			"default": "./dist/Select.svelte"
 		},
+		"./Table.svelte": {
+			"types": "./dist/Table.svelte.d.ts",
+			"svelte": "./dist/Table.svelte",
+			"default": "./dist/Table.svelte"
+		},
 		"./Textarea.svelte": {
 			"types": "./dist/Textarea.svelte.d.ts",
 			"svelte": "./dist/Textarea.svelte",
