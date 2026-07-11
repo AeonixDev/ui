@@ -103,6 +103,11 @@
 			"svelte": "./dist/NavItem.svelte",
 			"default": "./dist/NavItem.svelte"
 		},
+		"./Pagination.svelte": {
+			"types": "./dist/Pagination.svelte.d.ts",
+			"svelte": "./dist/Pagination.svelte",
+			"default": "./dist/Pagination.svelte"
+		},
 		"./Progress.svelte": {
 			"types": "./dist/Progress.svelte.d.ts",
 			"svelte": "./dist/Progress.svelte",
