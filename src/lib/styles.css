@@ -8,6 +8,10 @@
 @source "./Form.svelte";
 @source "./FormControl.ts";
 @source "./Input.svelte";
+@source "./Nav.svelte";
+@source "./Nav.ts";
+@source "./NavGroup.svelte";
+@source "./NavItem.svelte";
 @source "./Select.svelte";
 @source "./Textarea.svelte";
 
