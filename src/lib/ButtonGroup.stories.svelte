@@ -12,7 +12,7 @@
   const { Story } = defineMeta({
     args: {
       disabled: false,
-      variant: 'primary'
+      variant: 'default'
     },
     argTypes: {
       disabled: {
@@ -27,11 +27,11 @@
       variant: {
         control: 'inline-radio',
         description: 'Visual emphasis inherited by buttons that do not set their own variant.',
-        options: ['primary', 'secondary'],
+        options: ['default', 'primary', 'secondary'],
         table: {
           category: 'Appearance',
-          defaultValue: { summary: "'primary'" },
-          type: { summary: "'primary' | 'secondary'" }
+          defaultValue: { summary: "'default'" },
+          type: { summary: "'default' | 'primary' | 'secondary'" }
         }
       }
     },
@@ -60,7 +60,9 @@
   </ButtonGroup>
 {/snippet}
 
-<Story name="Primary" />
+<Story name="Default" />
+
+<Story name="Primary" args={{ variant: 'primary' }} />
 
 <Story name="Secondary">
   {#snippet template(args: ButtonGroupStoryArgs)}

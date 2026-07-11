@@ -11,7 +11,7 @@
   const { Story } = defineMeta({
     args: {
       size: 'md',
-      variant: 'primary'
+      variant: 'default'
     },
     argTypes: {
       size: {
@@ -27,11 +27,11 @@
       variant: {
         control: 'inline-radio',
         description: 'Visual emphasis for the badge.',
-        options: ['primary', 'secondary'],
+        options: ['default', 'primary', 'secondary'],
         table: {
           category: 'Appearance',
-          defaultValue: { summary: "'primary'" },
-          type: { summary: "'primary' | 'secondary'" }
+          defaultValue: { summary: "'default'" },
+          type: { summary: "'default' | 'primary' | 'secondary'" }
         }
       }
     },
@@ -56,7 +56,13 @@
   <Badge variant={args.variant} size={args.size}>Badge</Badge>
 {/snippet}
 
-<Story name="Primary">
+<Story name="Default">
+  {#snippet template(args: BadgeStoryArgs)}
+    <Badge variant={args.variant} size={args.size}>Default badge</Badge>
+  {/snippet}
+</Story>
+
+<Story name="Primary" args={{ variant: 'primary' }}>
   {#snippet template(args: BadgeStoryArgs)}
     <Badge variant={args.variant} size={args.size}>Primary badge</Badge>
   {/snippet}

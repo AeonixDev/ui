@@ -5,6 +5,7 @@
   import type { Size, Variant } from './types.js';
 
   const variantClasses = {
+    default: 'bg-foreground/10 text-foreground shadow-sm',
     primary: 'bg-primary text-primary-foreground',
     secondary: 'bg-secondary text-secondary-foreground'
   } satisfies Record<Variant, string>;
@@ -20,7 +21,7 @@
     {
       defaultVariants: {
         size: 'md',
-        variant: 'primary'
+        variant: 'default'
       },
       variants: {
         size: sizeClasses,
@@ -42,7 +43,7 @@
 <script lang="ts">
   let {
     class: className = '',
-    variant = 'primary',
+    variant = 'default',
     size = 'md',
     children,
     ...restProps

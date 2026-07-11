@@ -14,7 +14,7 @@
   const { Story } = defineMeta({
     args: {
       mode: 'horizontal',
-      variant: 'primary'
+      variant: 'default'
     },
     argTypes: {
       mode: {
@@ -30,11 +30,11 @@
       variant: {
         control: 'inline-radio',
         description: 'Navigation and link color treatment.',
-        options: ['primary', 'secondary'],
+        options: ['default', 'primary', 'secondary'],
         table: {
           category: 'Appearance',
-          defaultValue: { summary: "'primary'" },
-          type: { summary: "'primary' | 'secondary'" }
+          defaultValue: { summary: "'default'" },
+          type: { summary: "'default' | 'primary' | 'secondary'" }
         }
       }
     },
@@ -83,9 +83,13 @@
   </Nav>
 {/snippet}
 
-<Story name="Primary horizontal" />
+<Story name="Default horizontal" />
 
-<Story name="Primary vertical" args={{ mode: 'vertical' }} />
+<Story name="Default vertical" args={{ mode: 'vertical' }} />
+
+<Story name="Primary horizontal" args={{ variant: 'primary' }} />
+
+<Story name="Primary vertical" args={{ mode: 'vertical', variant: 'primary' }} />
 
 <Story name="Secondary horizontal" args={{ variant: 'secondary' }} />
 

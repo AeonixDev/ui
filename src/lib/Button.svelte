@@ -7,9 +7,12 @@
   import type { Size, Variant } from './types.js';
 
   const variantClasses = {
-    primary: 'bg-primary text-primary-foreground shadow-sm hover:bg-primary/90 active:bg-primary/80',
+    default:
+      'bg-foreground/10 text-foreground shadow-sm hover:bg-foreground/15 active:bg-foreground/20 focus-visible:ring-foreground/40',
+    primary:
+      'bg-primary text-primary-foreground shadow-sm hover:bg-primary/90 active:bg-primary/80 focus-visible:ring-primary/40',
     secondary:
-      'bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/90 active:bg-secondary/80'
+      'bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/90 active:bg-secondary/80 focus-visible:ring-secondary/40'
   } satisfies Record<Variant, string>;
 
   const sizeClasses = {
@@ -19,11 +22,11 @@
   } satisfies Record<Size, string>;
 
   const buttonVariants = cva(
-    'inline-flex items-center justify-center rounded-lg border-0 border-none font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50',
+    'inline-flex items-center justify-center rounded-lg border-0 border-none font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50',
     {
       defaultVariants: {
         size: 'md',
-        variant: 'primary'
+        variant: 'default'
       },
       variants: {
         size: sizeClasses,
@@ -56,7 +59,7 @@
     ...restProps
   }: ButtonProps = $props();
 
-  const effectiveVariant = $derived(variant ?? buttonGroup?.variant ?? 'primary');
+  const effectiveVariant = $derived(variant ?? buttonGroup?.variant ?? 'default');
   const effectiveDisabled = $derived(buttonGroup?.disabled ?? disabled ?? false);
   const classes = $derived(buttonVariants({ class: className, size, variant: effectiveVariant }));
 </script>

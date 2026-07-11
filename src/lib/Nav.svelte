@@ -11,7 +11,7 @@
   const navVariants = cva('box-border flex min-w-0 max-w-full justify-between gap-1 rounded-lg p-1', {
     defaultVariants: {
       mode: 'horizontal',
-      variant: 'primary'
+      variant: 'default'
     },
     variants: {
       mode: {
@@ -19,6 +19,8 @@
         vertical: 'flex-col items-stretch'
       },
       variant: {
+        default:
+          'bg-foreground/10 text-foreground shadow-sm',
         primary: 'bg-primary text-primary-foreground',
         secondary: 'bg-secondary text-secondary-foreground'
       }
@@ -40,7 +42,7 @@
     children,
     class: className = '',
     mode = 'horizontal',
-    variant = 'primary',
+    variant = 'default',
     ...restProps
   }: NavProps = $props();
 

@@ -9,6 +9,12 @@
     compoundVariants: [
       {
         class:
+          'text-foreground hover:bg-foreground/10 focus-visible:ring-foreground/40 focus-visible:ring-offset-background active:bg-foreground/15 aria-[current=page]:bg-foreground/15',
+        type: ['link', 'button'],
+        variant: 'default'
+      },
+      {
+        class:
           'text-primary-foreground hover:bg-primary-foreground/15 focus-visible:ring-primary-foreground/60 focus-visible:ring-offset-primary active:bg-primary-foreground/25 aria-[current=page]:bg-primary-foreground/20',
         type: ['link', 'button'],
         variant: 'primary'
@@ -19,6 +25,7 @@
         type: ['link', 'button'],
         variant: 'secondary'
       },
+      { class: 'bg-foreground/20', type: 'divider', variant: 'default' },
       { class: 'bg-primary-foreground/30', type: 'divider', variant: 'primary' },
       { class: 'bg-secondary-foreground/30', type: 'divider', variant: 'secondary' },
       { class: 'h-6 w-px', mode: 'horizontal', type: 'divider' },
@@ -28,7 +35,7 @@
     defaultVariants: {
       mode: 'horizontal',
       type: 'link',
-      variant: 'primary'
+      variant: 'default'
     },
     variants: {
       mode: {
@@ -43,6 +50,7 @@
           'inline-flex items-center overflow-hidden text-ellipsis whitespace-nowrap rounded-md px-3 py-2 font-medium text-sm no-underline transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1'
       },
       variant: {
+        default: null,
         primary: null,
         secondary: null
       }
@@ -82,7 +90,7 @@
   let { children, class: className = '', type, ...restProps }: NavItemProps = $props();
 
   const mode = $derived(nav?.mode ?? 'horizontal');
-  const variant = $derived(nav?.variant ?? 'primary');
+  const variant = $derived(nav?.variant ?? 'default');
   const classes = $derived(navItemVariants({ class: className, mode, type, variant }));
   const dividerOrientation = $derived(mode === 'horizontal' ? 'vertical' : 'horizontal');
   const linkProps = $derived(restProps as LinkElementProps);
