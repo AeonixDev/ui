@@ -3,6 +3,7 @@ name: Build
 on:
   push:
     branches:
+      - feat/initial-components
       - main
   pull_request:
 
