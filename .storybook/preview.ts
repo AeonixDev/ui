@@ -1,4 +1,4 @@
-import type { Preview } from "@storybook/svelte";
+import type { Preview } from "@storybook/svelte-vite";
 import { themes } from "storybook/theming";
 import "./preview.css";
 import "./styles.css";
@@ -43,7 +43,7 @@ const preview: Preview = {
 	},
 	initialGlobals: { theme: "dark" },
 	parameters: {
-		backgrounds: { disable: true },
+		backgrounds: { disabled: true },
 		controls: { matchers: { color: /(background|color)$/i, date: /Date$/i } },
 		docs: { theme: themes.dark },
 	},
