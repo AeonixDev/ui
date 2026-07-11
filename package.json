@@ -33,6 +33,16 @@
 			"svelte": "./dist/Badge.svelte",
 			"default": "./dist/Badge.svelte"
 		},
+		"./Breadcrumb.svelte": {
+			"types": "./dist/Breadcrumb.svelte.d.ts",
+			"svelte": "./dist/Breadcrumb.svelte",
+			"default": "./dist/Breadcrumb.svelte"
+		},
+		"./BreadcrumbItem.svelte": {
+			"types": "./dist/BreadcrumbItem.svelte.d.ts",
+			"svelte": "./dist/BreadcrumbItem.svelte",
+			"default": "./dist/BreadcrumbItem.svelte"
+		},
 		"./Button.svelte": {
 			"types": "./dist/Button.svelte.d.ts",
 			"svelte": "./dist/Button.svelte",

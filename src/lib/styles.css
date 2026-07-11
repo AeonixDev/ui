@@ -5,6 +5,8 @@
 @source "./Button.svelte";
 @source "./ButtonGroup.svelte";
 @source "./Badge.svelte";
+@source "./Breadcrumb.svelte";
+@source "./BreadcrumbItem.svelte";
 @source "./Checkbox.svelte";
 @source "./Divider.svelte";
 @source "./Form.svelte";
