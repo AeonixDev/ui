@@ -143,6 +143,11 @@
 			"svelte": "./dist/ToastContainer.svelte",
 			"default": "./dist/ToastContainer.svelte"
 		},
+		"./Tooltip.svelte": {
+			"types": "./dist/Tooltip.svelte.d.ts",
+			"svelte": "./dist/Tooltip.svelte",
+			"default": "./dist/Tooltip.svelte"
+		},
 		"./package.json": "./package.json",
 		"./styles.css": "./dist/styles.css",
 		"./types": {

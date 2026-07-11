@@ -28,6 +28,7 @@
 @source "./Toast.svelte";
 @source "./Toast.ts";
 @source "./ToastContainer.svelte";
+@source "./Tooltip.svelte";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
