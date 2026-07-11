@@ -2,3 +2,7 @@
 
 @source "../src/**/*.stories.{svelte,ts}";
 @source "./**/*.{svelte,ts}";
+
+body .docs-story.docs-story {
+	background: var(--color-background);
+}
