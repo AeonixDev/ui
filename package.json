@@ -5,21 +5,21 @@
 	"description": "Svelte UI components for AeonixDev projects",
 	"devDependencies": {
 		"@aeonixdev/configs": "github:AeonixDev/configs",
-		"@storybook/addon-docs": "10.4.6",
+		"@storybook/addon-docs": "10.5.0",
 		"@storybook/addon-svelte-csf": "5.1.2",
-		"@storybook/svelte": "10.4.6",
-		"@storybook/svelte-vite": "10.4.6",
+		"@storybook/svelte": "10.5.0",
+		"@storybook/svelte-vite": "10.5.0",
 		"@sveltejs/package": "2.5.8",
-		"@sveltejs/vite-plugin-svelte": "7.1.4",
+		"@sveltejs/vite-plugin-svelte": "7.2.0",
 		"@tailwindcss/cli": "4.3.2",
 		"@tailwindcss/vite": "4.3.2",
 		"@tsconfig/svelte": "5.0.8",
-		"storybook": "10.4.6",
+		"storybook": "10.5.0",
 		"svelte": "5.56.4",
-		"svelte-check": "4.7.1",
+		"svelte-check": "4.7.2",
 		"tailwindcss": "4.3.2",
 		"typescript": "6.0.3",
-		"vite": "8.1.3"
+		"vite": "8.1.4"
 	},
 	"exports": {
 		"./Badge.svelte": {
