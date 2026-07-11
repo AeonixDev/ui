@@ -25,9 +25,37 @@
         type: ['link', 'button'],
         variant: 'secondary'
       },
+      {
+        class:
+          'text-error-foreground hover:bg-error-foreground/15 focus-visible:ring-error-foreground/60 focus-visible:ring-offset-error active:bg-error-foreground/25 aria-[current=page]:bg-error-foreground/20',
+        type: ['link', 'button'],
+        variant: 'error'
+      },
+      {
+        class:
+          'text-info-foreground hover:bg-info-foreground/15 focus-visible:ring-info-foreground/60 focus-visible:ring-offset-info active:bg-info-foreground/25 aria-[current=page]:bg-info-foreground/20',
+        type: ['link', 'button'],
+        variant: 'info'
+      },
+      {
+        class:
+          'text-success-foreground hover:bg-success-foreground/15 focus-visible:ring-success-foreground/60 focus-visible:ring-offset-success active:bg-success-foreground/25 aria-[current=page]:bg-success-foreground/20',
+        type: ['link', 'button'],
+        variant: 'success'
+      },
+      {
+        class:
+          'text-warning-foreground hover:bg-warning-foreground/15 focus-visible:ring-warning-foreground/60 focus-visible:ring-offset-warning active:bg-warning-foreground/25 aria-[current=page]:bg-warning-foreground/20',
+        type: ['link', 'button'],
+        variant: 'warning'
+      },
       { class: 'bg-foreground/20', type: 'divider', variant: 'default' },
+      { class: 'bg-error-foreground/30', type: 'divider', variant: 'error' },
+      { class: 'bg-info-foreground/30', type: 'divider', variant: 'info' },
       { class: 'bg-primary-foreground/30', type: 'divider', variant: 'primary' },
       { class: 'bg-secondary-foreground/30', type: 'divider', variant: 'secondary' },
+      { class: 'bg-success-foreground/30', type: 'divider', variant: 'success' },
+      { class: 'bg-warning-foreground/30', type: 'divider', variant: 'warning' },
       { class: 'h-6 w-px', mode: 'horizontal', type: 'divider' },
       { class: 'justify-start', mode: 'vertical', type: 'button' },
       { class: 'h-px', mode: 'vertical', type: 'divider' }
@@ -51,8 +79,12 @@
       },
       variant: {
         default: null,
+        error: null,
+        info: null,
         primary: null,
-        secondary: null
+        secondary: null,
+        success: null,
+        warning: null
       }
     }
   });

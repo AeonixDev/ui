@@ -21,19 +21,23 @@
         },
         variant: {
           default: "bg-foreground/10 text-foreground",
+          error: "bg-error text-error-foreground",
+          info: "bg-info text-info-foreground",
           primary: "bg-primary text-primary-foreground",
-          secondary: "bg-secondary text-secondary-foreground"
+          secondary: "bg-secondary text-secondary-foreground",
+          success: "bg-success text-success-foreground",
+          warning: "bg-warning text-warning-foreground"
         }
       }
     }
   );
 
   const statusClasses = {
-    away: "bg-amber-400",
-    "do not disturb": "bg-rose-500",
-    offline: "bg-slate-500",
-    online: "bg-emerald-500",
-    unknown: "bg-sky-400"
+    away: "bg-warning",
+    "do not disturb": "bg-error",
+    offline: "bg-foreground/40",
+    online: "bg-success",
+    unknown: "bg-info"
   } satisfies Record<AvatarStatus, string>;
 
   const statusSizeClasses = {

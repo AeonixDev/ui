@@ -30,11 +30,11 @@
       variant: {
         control: 'inline-radio',
         description: 'Navigation and link color treatment.',
-        options: ['default', 'primary', 'secondary'],
+        options: ['default', 'primary', 'secondary', 'error', 'info', 'success', 'warning'],
         table: {
           category: 'Appearance',
           defaultValue: { summary: "'default'" },
-          type: { summary: "'default' | 'primary' | 'secondary'" }
+          type: { summary: 'Variant' }
         }
       }
     },

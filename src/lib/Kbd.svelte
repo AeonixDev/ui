@@ -19,8 +19,12 @@
         },
         variant: {
           default: "border-foreground/25 bg-foreground/10 text-foreground",
+          error: "border-black/25 bg-error text-error-foreground",
+          info: "border-black/25 bg-info text-info-foreground",
           primary: "border-black/25 bg-primary text-primary-foreground",
-          secondary: "border-black/25 bg-secondary text-secondary-foreground"
+          secondary: "border-black/25 bg-secondary text-secondary-foreground",
+          success: "border-black/25 bg-success text-success-foreground",
+          warning: "border-black/25 bg-warning text-warning-foreground"
         }
       }
     }

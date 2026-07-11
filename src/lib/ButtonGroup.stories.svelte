@@ -27,11 +27,11 @@
       variant: {
         control: 'inline-radio',
         description: 'Visual emphasis inherited by buttons that do not set their own variant.',
-        options: ['default', 'primary', 'secondary'],
+        options: ['default', 'primary', 'secondary', 'error', 'info', 'success', 'warning'],
         table: {
           category: 'Appearance',
           defaultValue: { summary: "'default'" },
-          type: { summary: "'default' | 'primary' | 'secondary'" }
+          type: { summary: 'Variant' }
         }
       }
     },

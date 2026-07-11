@@ -21,8 +21,12 @@
       },
       variant: {
         default: 'variant-default',
+        error: 'variant-error',
+        info: 'variant-info',
         primary: 'variant-primary',
-        secondary: 'variant-secondary'
+        secondary: 'variant-secondary',
+        success: 'variant-success',
+        warning: 'variant-warning'
       }
     }
   });
@@ -200,6 +204,26 @@
   .table.variant-secondary {
     --table-accent: var(--color-secondary);
     --table-accent-foreground: var(--color-secondary-foreground);
+  }
+
+  .table.variant-error {
+    --table-accent: var(--color-error);
+    --table-accent-foreground: var(--color-error-foreground);
+  }
+
+  .table.variant-info {
+    --table-accent: var(--color-info);
+    --table-accent-foreground: var(--color-info-foreground);
+  }
+
+  .table.variant-success {
+    --table-accent: var(--color-success);
+    --table-accent-foreground: var(--color-success-foreground);
+  }
+
+  .table.variant-warning {
+    --table-accent: var(--color-warning);
+    --table-accent-foreground: var(--color-warning-foreground);
   }
 
   .table:not(.variant-default) {

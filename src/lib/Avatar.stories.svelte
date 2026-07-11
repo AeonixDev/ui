@@ -40,11 +40,11 @@
       variant: {
         control: "inline-radio",
         description: "Color treatment used by fallback content.",
-        options: ["default", "primary", "secondary"],
+        options: ["default", "primary", "secondary", "error", "info", "success", "warning"],
         table: {
           category: "Appearance",
           defaultValue: { summary: "'default'" },
-          type: { summary: "'default' | 'primary' | 'secondary'" }
+          type: { summary: "Variant" }
         }
       }
     },
@@ -140,6 +140,10 @@
       <Avatar size={args.size} variant="default">DF</Avatar>
       <Avatar size={args.size} variant="primary">PR</Avatar>
       <Avatar size={args.size} variant="secondary">SC</Avatar>
+      <Avatar size={args.size} variant="error">ER</Avatar>
+      <Avatar size={args.size} variant="info">IN</Avatar>
+      <Avatar size={args.size} variant="success">SU</Avatar>
+      <Avatar size={args.size} variant="warning">WA</Avatar>
     </div>
   {/snippet}
 </Story>
