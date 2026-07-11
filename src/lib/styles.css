@@ -1,6 +1,7 @@
 @import "tailwindcss/theme";
 @import "tailwindcss/utilities";
 
+@source "./Avatar.svelte";
 @source "./Button.svelte";
 @source "./ButtonGroup.svelte";
 @source "./Badge.svelte";
