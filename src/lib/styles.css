@@ -8,6 +8,7 @@
 @source "./Form.svelte";
 @source "./FormControl.ts";
 @source "./Input.svelte";
+@source "./Kbd.svelte";
 @source "./Nav.svelte";
 @source "./Nav.ts";
 @source "./NavGroup.svelte";

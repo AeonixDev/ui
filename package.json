@@ -52,6 +52,11 @@
 			"svelte": "./dist/Input.svelte",
 			"default": "./dist/Input.svelte"
 		},
+		"./Kbd.svelte": {
+			"types": "./dist/Kbd.svelte.d.ts",
+			"svelte": "./dist/Kbd.svelte",
+			"default": "./dist/Kbd.svelte"
+		},
 		"./Nav.svelte": {
 			"types": "./dist/Nav.svelte.d.ts",
 			"svelte": "./dist/Nav.svelte",
