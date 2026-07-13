@@ -22,6 +22,18 @@ Build the package:
 bun run package
 ```
 
+### Dashboard Example
+
+The SvelteKit workspace app in [`examples/dashboard`](./examples/dashboard) exercises every component in a responsive operations dashboard. It installs the local package through its public exports and refreshes the packaged output before starting.
+
+```sh
+bun install
+cd examples/dashboard
+bun run dev
+```
+
+The dashboard is available at `http://localhost:21001`. Run `bun run check` or `bun run build` from the example directory to validate it independently.
+
 ## Usage
 
 Import component styles once in your app (ideally in a root entrypoint or layout file so they are only included once):

@@ -35,7 +35,7 @@
 			docs: {
 				description: {
 					component:
-						"ToastContainer stores notifications in context, groups them into six viewport regions, and limits each region independently. Its component instance exposes addToast and removeToast methods.",
+						"ToastContainer registers its notification queue when initialized, groups toasts into six viewport regions, and limits each region independently. Import addToast and removeToast from @aeonixdev/ui/toast to manage notifications anywhere in the client application.",
 				},
 			},
 		},
@@ -45,13 +45,8 @@
 </script>
 
 <script lang="ts">
-	import type { ToastId, ToastOptions, ToastPosition } from "./ToastContainer.svelte";
-	import ToastContainer from "./ToastContainer.svelte";
-
-	type ToastContainerHandle = {
-		addToast: (toast: ToastOptions) => ToastId;
-		removeToast: (id: ToastId) => void;
-	};
+	import { addToast } from "./Toast.js";
+	import ToastContainer, { type ToastPosition } from "./ToastContainer.svelte";
 
 	const positions: ToastPosition[] = [
 		"top-left",
@@ -62,19 +57,10 @@
 		"bottom-right",
 	];
 
-	let container = $state<ToastContainerHandle>();
-	let initializedContainer: ToastContainerHandle | undefined;
-
-	$effect(() => {
-		if (!container || initializedContainer === container) {
-			return;
-		}
-
-		initializedContainer = container;
-
+	function showAllPositions(): void {
 		for (const position of positions) {
 			for (let index = 1; index <= 3; index += 1) {
-				container.addToast({
+				addToast({
 					duration: index === 3 ? 10000 : undefined,
 					message: `Notification ${index} rendered in this region.`,
 					position,
@@ -86,7 +72,7 @@
 				});
 			}
 		}
-	});
+	}
 </script>
 
 <Story name="All positions">
@@ -96,7 +82,15 @@
 				One context-backed ToastContainer groups notifications without overlapping adjacent regions.
 			</p>
 
-			<ToastContainer bind:this={container} duration={args.duration} maxToasts={args.maxToasts} />
+			<button
+				class="mx-auto mt-4 block rounded-lg bg-primary px-4 py-2 text-primary-foreground"
+				onclick={showAllPositions}
+				type="button"
+			>
+				Show notifications
+			</button>
+
+			<ToastContainer duration={args.duration} maxToasts={args.maxToasts} />
 		</div>
 	{/snippet}
 </Story>

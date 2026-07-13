@@ -5,6 +5,7 @@
 	"description": "Svelte UI components for AeonixDev projects",
 	"devDependencies": {
 		"@aeonixdev/configs": "github:AeonixDev/configs",
+		"@biomejs/biome": "2.5.3",
 		"@storybook/addon-docs": "10.5.0",
 		"@storybook/addon-svelte-csf": "5.1.2",
 		"@storybook/svelte-vite": "10.5.0",
@@ -148,6 +149,10 @@
 			"svelte": "./dist/ToastContainer.svelte",
 			"default": "./dist/ToastContainer.svelte"
 		},
+		"./toast": {
+			"types": "./dist/Toast.d.ts",
+			"default": "./dist/Toast.js"
+		},
 		"./Tooltip.svelte": {
 			"types": "./dist/Tooltip.svelte.d.ts",
 			"svelte": "./dist/Tooltip.svelte",
@@ -171,11 +176,15 @@
 	"scripts": {
 		"build": "bun run package",
 		"build-storybook": "storybook build",
+		"build:dashboard": "bun run --cwd examples/dashboard build",
 		"build:styles": "tailwindcss -i ./src/lib/styles.css -o ./dist/styles.css --minify",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
+		"check:dashboard": "bun run --cwd examples/dashboard check",
 		"clean:package-output": "bun scripts/remove-story-files.mjs",
 		"format": "prettier --write . && biome check --write .",
+		"format:check": "prettier --check .",
 		"format:unsafe": "biome check --write --unsafe .",
+		"lint": "biome check .",
 		"package": "svelte-package && bun run clean:package-output && bun run build:styles",
 		"prepack": "bun run package",
 		"storybook": "storybook dev -p 21000 --no-open"
@@ -184,5 +193,8 @@
 		"**/*.css"
 	],
 	"type": "module",
-	"version": "0.0.0-alpha.0"
+	"version": "0.0.0-alpha.0",
+	"workspaces": [
+		"examples/dashboard"
+	]
 }

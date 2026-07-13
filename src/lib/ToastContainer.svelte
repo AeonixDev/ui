@@ -45,7 +45,7 @@
 	import { flip } from "svelte/animate";
 	import { cubicOut } from "svelte/easing";
 	import { fly } from "svelte/transition";
-	import { toastContextKey, type ToastContext, type ToastData } from "./Toast.js";
+	import { registerToastContext, toastContextKey, type ToastContext, type ToastData } from "./Toast.js";
 	import Toast from "./Toast.svelte";
 
 	let {
@@ -101,7 +101,11 @@
 	};
 
 	setContext(toastContextKey, toastContext);
+	const unregisterToastContext = typeof window === "undefined" ? undefined : registerToastContext(toastContext);
+
 	onDestroy(() => {
+		unregisterToastContext?.();
+
 		for (const timer of dismissTimers.values()) {
 			clearTimeout(timer);
 		}
@@ -125,11 +129,12 @@
 
 	function clearDismissTimer(id: ToastId): void {
 		const timer = dismissTimers.get(id);
-
-		if (timer !== undefined) {
-			clearTimeout(timer);
-			dismissTimers.delete(id);
+		if (timer === undefined) {
+			return;
 		}
+
+		clearTimeout(timer);
+		dismissTimers.delete(id);
 	}
 
 	function getToastOffset(position: ToastPosition): { x: number; y: number } {
