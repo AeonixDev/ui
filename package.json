@@ -9,9 +9,7 @@
 		"@storybook/addon-docs": "10.5.0",
 		"@storybook/addon-svelte-csf": "5.1.2",
 		"@storybook/svelte-vite": "10.5.0",
-		"@sveltejs/package": "2.5.8",
 		"@sveltejs/vite-plugin-svelte": "7.1.4",
-		"@tailwindcss/cli": "4.3.2",
 		"@tailwindcss/vite": "4.3.2",
 		"@tsconfig/svelte": "5.0.8",
 		"prettier": "3.9.5",
@@ -25,168 +23,140 @@
 	},
 	"exports": {
 		"./Avatar.svelte": {
-			"types": "./dist/Avatar.svelte.d.ts",
-			"svelte": "./dist/Avatar.svelte",
-			"default": "./dist/Avatar.svelte"
+			"svelte": "./src/lib/Avatar.svelte",
+			"default": "./src/lib/Avatar.svelte"
 		},
 		"./Badge.svelte": {
-			"types": "./dist/Badge.svelte.d.ts",
-			"svelte": "./dist/Badge.svelte",
-			"default": "./dist/Badge.svelte"
+			"svelte": "./src/lib/Badge.svelte",
+			"default": "./src/lib/Badge.svelte"
 		},
 		"./Breadcrumb.svelte": {
-			"types": "./dist/Breadcrumb.svelte.d.ts",
-			"svelte": "./dist/Breadcrumb.svelte",
-			"default": "./dist/Breadcrumb.svelte"
+			"svelte": "./src/lib/Breadcrumb.svelte",
+			"default": "./src/lib/Breadcrumb.svelte"
 		},
 		"./BreadcrumbItem.svelte": {
-			"types": "./dist/BreadcrumbItem.svelte.d.ts",
-			"svelte": "./dist/BreadcrumbItem.svelte",
-			"default": "./dist/BreadcrumbItem.svelte"
+			"svelte": "./src/lib/BreadcrumbItem.svelte",
+			"default": "./src/lib/BreadcrumbItem.svelte"
 		},
 		"./Button.svelte": {
-			"types": "./dist/Button.svelte.d.ts",
-			"svelte": "./dist/Button.svelte",
-			"default": "./dist/Button.svelte"
+			"svelte": "./src/lib/Button.svelte",
+			"default": "./src/lib/Button.svelte"
 		},
 		"./ButtonGroup.svelte": {
-			"types": "./dist/ButtonGroup.svelte.d.ts",
-			"svelte": "./dist/ButtonGroup.svelte",
-			"default": "./dist/ButtonGroup.svelte"
+			"svelte": "./src/lib/ButtonGroup.svelte",
+			"default": "./src/lib/ButtonGroup.svelte"
 		},
 		"./Card.svelte": {
-			"types": "./dist/Card.svelte.d.ts",
-			"svelte": "./dist/Card.svelte",
-			"default": "./dist/Card.svelte"
+			"svelte": "./src/lib/Card.svelte",
+			"default": "./src/lib/Card.svelte"
 		},
 		"./Checkbox.svelte": {
-			"types": "./dist/Checkbox.svelte.d.ts",
-			"svelte": "./dist/Checkbox.svelte",
-			"default": "./dist/Checkbox.svelte"
+			"svelte": "./src/lib/Checkbox.svelte",
+			"default": "./src/lib/Checkbox.svelte"
 		},
 		"./Divider.svelte": {
-			"types": "./dist/Divider.svelte.d.ts",
-			"svelte": "./dist/Divider.svelte",
-			"default": "./dist/Divider.svelte"
+			"svelte": "./src/lib/Divider.svelte",
+			"default": "./src/lib/Divider.svelte"
 		},
 		"./Form.svelte": {
-			"types": "./dist/Form.svelte.d.ts",
-			"svelte": "./dist/Form.svelte",
-			"default": "./dist/Form.svelte"
+			"svelte": "./src/lib/Form.svelte",
+			"default": "./src/lib/Form.svelte"
 		},
 		"./Input.svelte": {
-			"types": "./dist/Input.svelte.d.ts",
-			"svelte": "./dist/Input.svelte",
-			"default": "./dist/Input.svelte"
+			"svelte": "./src/lib/Input.svelte",
+			"default": "./src/lib/Input.svelte"
 		},
 		"./Kbd.svelte": {
-			"types": "./dist/Kbd.svelte.d.ts",
-			"svelte": "./dist/Kbd.svelte",
-			"default": "./dist/Kbd.svelte"
+			"svelte": "./src/lib/Kbd.svelte",
+			"default": "./src/lib/Kbd.svelte"
 		},
 		"./Message.svelte": {
-			"types": "./dist/Message.svelte.d.ts",
-			"svelte": "./dist/Message.svelte",
-			"default": "./dist/Message.svelte"
+			"svelte": "./src/lib/Message.svelte",
+			"default": "./src/lib/Message.svelte"
 		},
 		"./Nav.svelte": {
-			"types": "./dist/Nav.svelte.d.ts",
-			"svelte": "./dist/Nav.svelte",
-			"default": "./dist/Nav.svelte"
+			"svelte": "./src/lib/Nav.svelte",
+			"default": "./src/lib/Nav.svelte"
 		},
 		"./NavGroup.svelte": {
-			"types": "./dist/NavGroup.svelte.d.ts",
-			"svelte": "./dist/NavGroup.svelte",
-			"default": "./dist/NavGroup.svelte"
+			"svelte": "./src/lib/NavGroup.svelte",
+			"default": "./src/lib/NavGroup.svelte"
 		},
 		"./NavItem.svelte": {
-			"types": "./dist/NavItem.svelte.d.ts",
-			"svelte": "./dist/NavItem.svelte",
-			"default": "./dist/NavItem.svelte"
+			"svelte": "./src/lib/NavItem.svelte",
+			"default": "./src/lib/NavItem.svelte"
 		},
 		"./Pagination.svelte": {
-			"types": "./dist/Pagination.svelte.d.ts",
-			"svelte": "./dist/Pagination.svelte",
-			"default": "./dist/Pagination.svelte"
+			"svelte": "./src/lib/Pagination.svelte",
+			"default": "./src/lib/Pagination.svelte"
 		},
 		"./Progress.svelte": {
-			"types": "./dist/Progress.svelte.d.ts",
-			"svelte": "./dist/Progress.svelte",
-			"default": "./dist/Progress.svelte"
+			"svelte": "./src/lib/Progress.svelte",
+			"default": "./src/lib/Progress.svelte"
 		},
 		"./Select.svelte": {
-			"types": "./dist/Select.svelte.d.ts",
-			"svelte": "./dist/Select.svelte",
-			"default": "./dist/Select.svelte"
+			"svelte": "./src/lib/Select.svelte",
+			"default": "./src/lib/Select.svelte"
 		},
 		"./Skeleton.svelte": {
-			"types": "./dist/Skeleton.svelte.d.ts",
-			"svelte": "./dist/Skeleton.svelte",
-			"default": "./dist/Skeleton.svelte"
+			"svelte": "./src/lib/Skeleton.svelte",
+			"default": "./src/lib/Skeleton.svelte"
 		},
 		"./Spinner.svelte": {
-			"types": "./dist/Spinner.svelte.d.ts",
-			"svelte": "./dist/Spinner.svelte",
-			"default": "./dist/Spinner.svelte"
+			"svelte": "./src/lib/Spinner.svelte",
+			"default": "./src/lib/Spinner.svelte"
 		},
 		"./Table.svelte": {
-			"types": "./dist/Table.svelte.d.ts",
-			"svelte": "./dist/Table.svelte",
-			"default": "./dist/Table.svelte"
+			"svelte": "./src/lib/Table.svelte",
+			"default": "./src/lib/Table.svelte"
 		},
 		"./Textarea.svelte": {
-			"types": "./dist/Textarea.svelte.d.ts",
-			"svelte": "./dist/Textarea.svelte",
-			"default": "./dist/Textarea.svelte"
+			"svelte": "./src/lib/Textarea.svelte",
+			"default": "./src/lib/Textarea.svelte"
 		},
 		"./Toast.svelte": {
-			"types": "./dist/Toast.svelte.d.ts",
-			"svelte": "./dist/Toast.svelte",
-			"default": "./dist/Toast.svelte"
+			"svelte": "./src/lib/Toast.svelte",
+			"default": "./src/lib/Toast.svelte"
 		},
 		"./ToastContainer.svelte": {
-			"types": "./dist/ToastContainer.svelte.d.ts",
-			"svelte": "./dist/ToastContainer.svelte",
-			"default": "./dist/ToastContainer.svelte"
+			"svelte": "./src/lib/ToastContainer.svelte",
+			"default": "./src/lib/ToastContainer.svelte"
 		},
 		"./toast": {
-			"types": "./dist/Toast.d.ts",
-			"default": "./dist/Toast.js"
+			"types": "./src/lib/Toast.ts",
+			"default": "./src/lib/Toast.ts"
 		},
 		"./Tooltip.svelte": {
-			"types": "./dist/Tooltip.svelte.d.ts",
-			"svelte": "./dist/Tooltip.svelte",
-			"default": "./dist/Tooltip.svelte"
+			"svelte": "./src/lib/Tooltip.svelte",
+			"default": "./src/lib/Tooltip.svelte"
 		},
 		"./package.json": "./package.json",
-		"./styles.css": "./dist/styles.css",
+		"./styles.css": "./src/lib/styles.css",
 		"./types": {
-			"types": "./dist/types.d.ts",
-			"default": "./dist/types.js"
+			"types": "./src/lib/types.ts",
+			"default": "./src/lib/types.ts"
 		}
 	},
 	"files": [
-		"dist"
+		"src/lib",
+		"!src/lib/**/*.stories.svelte"
 	],
 	"name": "@aeonixdev/ui",
 	"packageManager": "bun@1.3.14",
 	"peerDependencies": {
-		"svelte": "5.56.4"
+		"svelte": "5.56.4",
+		"tailwindcss": "4.3.2"
 	},
 	"scripts": {
-		"build": "bun run package",
 		"build-storybook": "storybook build",
 		"build:dashboard": "bun run --cwd examples/dashboard build",
-		"build:styles": "tailwindcss -i ./src/lib/styles.css -o ./dist/styles.css --minify",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
 		"check:dashboard": "bun run --cwd examples/dashboard check",
-		"clean:package-output": "bun scripts/remove-story-files.mjs",
+		"check:package": "bun pm pack --dry-run --ignore-scripts",
 		"format": "prettier --write . && biome check --write .",
 		"format:check": "prettier --check .",
 		"format:unsafe": "biome check --write --unsafe .",
 		"lint": "biome check .",
-		"package": "svelte-package && bun run clean:package-output && bun run build:styles",
-		"prepack": "bun run package",
 		"storybook": "storybook dev -p 21000 --no-open"
 	},
 	"sideEffects": [

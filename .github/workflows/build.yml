@@ -35,8 +35,8 @@ jobs:
       - name: Check types
         run: bun run check
 
-      - name: Build package
-        run: bun run build
+      - name: Check package contents
+        run: bun run check:package
 
       - name: Check dashboard
         run: bun run check:dashboard

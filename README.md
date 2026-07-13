@@ -16,15 +16,9 @@ Run Storybook:
 bun run storybook
 ```
 
-Build the package:
-
-```sh
-bun run package
-```
-
 ### Dashboard Example
 
-The SvelteKit workspace app in [`examples/dashboard`](./examples/dashboard) exercises every component in a responsive operations dashboard. It installs the local package through its public exports and refreshes the packaged output before starting.
+The SvelteKit workspace app in [`examples/dashboard`](./examples/dashboard) exercises every component in a responsive operations dashboard. It consumes the library's raw source through its public exports, just like an installed package.
 
 ```sh
 bun install
@@ -36,10 +30,11 @@ The dashboard is available at `http://localhost:21001`. Run `bun run check` or `
 
 ## Usage
 
-Import component styles once in your app (ideally in a root entrypoint or layout file so they are only included once):
+The package ships raw Svelte, TypeScript, and Tailwind CSS source. Configure your app's bundler for Svelte and Tailwind CSS, then import Tailwind and the component styles once in your global stylesheet:
 
-```ts
-import "@aeonixdev/ui/styles.css";
+```css
+@import "tailwindcss";
+@import "@aeonixdev/ui/styles.css";
 ```
 
 Import components through explicit entry points:

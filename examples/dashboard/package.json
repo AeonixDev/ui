@@ -16,10 +16,9 @@
 	"name": "@aeonixdev/ui-dashboard-example",
 	"private": true,
 	"scripts": {
-		"build": "bun run prepare:ui && vite build",
+		"build": "vite build",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"dev": "bun run prepare:ui && vite --port 21001",
-		"prepare:ui": "bun run --cwd ../.. package",
+		"dev": "vite --port 21001",
 		"preview": "vite preview --port 21001"
 	},
 	"type": "module"
