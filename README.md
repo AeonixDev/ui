@@ -16,18 +16,6 @@ Run Storybook:
 bun run storybook
 ```
 
-### Dashboard Example
-
-The SvelteKit workspace app in [`examples/dashboard`](./examples/dashboard) exercises every component in a responsive operations dashboard. It consumes the library's raw source through its public exports, just like an installed package.
-
-```sh
-bun install
-cd examples/dashboard
-bun run dev
-```
-
-The dashboard is available at `http://localhost:21001`. Run `bun run check` or `bun run build` from the example directory to validate it independently.
-
 ## Usage
 
 The package ships raw Svelte, TypeScript, and Tailwind CSS source. Configure your app's bundler for Svelte and Tailwind CSS, then import Tailwind and the component styles once in your global stylesheet:

@@ -9,7 +9,7 @@
 					}
 				}
 			},
-			"includes": ["package.json", "package/package.json"]
+			"includes": ["package.json"]
 		}
 	]
 }

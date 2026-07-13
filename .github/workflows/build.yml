@@ -37,9 +37,3 @@ jobs:
 
       - name: Check package contents
         run: bun run check:package
-
-      - name: Check dashboard
-        run: bun run check:dashboard
-
-      - name: Build dashboard
-        run: bun run build:dashboard

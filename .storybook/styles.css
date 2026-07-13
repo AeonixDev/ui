@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "../src/lib/styles.css";
+@import "../src/styles.css";
 
 @source "../src/**/*.stories.{svelte,ts}";
 @source "./**/*.{svelte,ts}";

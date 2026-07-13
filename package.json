@@ -1,27 +1,165 @@
 {
+	"dependencies": {
+		"class-variance-authority": "0.7.1"
+	},
+	"description": "Svelte UI components for AeonixDev projects",
 	"devDependencies": {
 		"@aeonixdev/configs": "github:AeonixDev/configs",
 		"@biomejs/biome": "2.5.3",
+		"@storybook/addon-docs": "10.5.0",
+		"@storybook/addon-svelte-csf": "5.1.2",
+		"@storybook/svelte-vite": "10.5.0",
+		"@sveltejs/vite-plugin-svelte": "7.1.4",
+		"@tailwindcss/vite": "4.3.2",
+		"@tsconfig/svelte": "5.0.8",
 		"prettier": "3.9.5",
-		"prettier-plugin-svelte": "4.1.1"
+		"prettier-plugin-svelte": "4.1.1",
+		"storybook": "10.5.0",
+		"svelte": "5.56.4",
+		"svelte-check": "4.7.1",
+		"tailwindcss": "4.3.2",
+		"typescript": "6.0.3",
+		"vite": "8.1.3"
 	},
-	"name": "aeonixdev-ui",
+	"exports": {
+		"./Avatar.svelte": {
+			"svelte": "./src/Avatar.svelte",
+			"default": "./src/Avatar.svelte"
+		},
+		"./Badge.svelte": {
+			"svelte": "./src/Badge.svelte",
+			"default": "./src/Badge.svelte"
+		},
+		"./Breadcrumb.svelte": {
+			"svelte": "./src/Breadcrumb.svelte",
+			"default": "./src/Breadcrumb.svelte"
+		},
+		"./BreadcrumbItem.svelte": {
+			"svelte": "./src/BreadcrumbItem.svelte",
+			"default": "./src/BreadcrumbItem.svelte"
+		},
+		"./Button.svelte": {
+			"svelte": "./src/Button.svelte",
+			"default": "./src/Button.svelte"
+		},
+		"./ButtonGroup.svelte": {
+			"svelte": "./src/ButtonGroup.svelte",
+			"default": "./src/ButtonGroup.svelte"
+		},
+		"./Card.svelte": {
+			"svelte": "./src/Card.svelte",
+			"default": "./src/Card.svelte"
+		},
+		"./Checkbox.svelte": {
+			"svelte": "./src/Checkbox.svelte",
+			"default": "./src/Checkbox.svelte"
+		},
+		"./Divider.svelte": {
+			"svelte": "./src/Divider.svelte",
+			"default": "./src/Divider.svelte"
+		},
+		"./Form.svelte": {
+			"svelte": "./src/Form.svelte",
+			"default": "./src/Form.svelte"
+		},
+		"./Input.svelte": {
+			"svelte": "./src/Input.svelte",
+			"default": "./src/Input.svelte"
+		},
+		"./Kbd.svelte": {
+			"svelte": "./src/Kbd.svelte",
+			"default": "./src/Kbd.svelte"
+		},
+		"./Message.svelte": {
+			"svelte": "./src/Message.svelte",
+			"default": "./src/Message.svelte"
+		},
+		"./Nav.svelte": {
+			"svelte": "./src/Nav.svelte",
+			"default": "./src/Nav.svelte"
+		},
+		"./NavGroup.svelte": {
+			"svelte": "./src/NavGroup.svelte",
+			"default": "./src/NavGroup.svelte"
+		},
+		"./NavItem.svelte": {
+			"svelte": "./src/NavItem.svelte",
+			"default": "./src/NavItem.svelte"
+		},
+		"./Pagination.svelte": {
+			"svelte": "./src/Pagination.svelte",
+			"default": "./src/Pagination.svelte"
+		},
+		"./Progress.svelte": {
+			"svelte": "./src/Progress.svelte",
+			"default": "./src/Progress.svelte"
+		},
+		"./Select.svelte": {
+			"svelte": "./src/Select.svelte",
+			"default": "./src/Select.svelte"
+		},
+		"./Skeleton.svelte": {
+			"svelte": "./src/Skeleton.svelte",
+			"default": "./src/Skeleton.svelte"
+		},
+		"./Spinner.svelte": {
+			"svelte": "./src/Spinner.svelte",
+			"default": "./src/Spinner.svelte"
+		},
+		"./Table.svelte": {
+			"svelte": "./src/Table.svelte",
+			"default": "./src/Table.svelte"
+		},
+		"./Textarea.svelte": {
+			"svelte": "./src/Textarea.svelte",
+			"default": "./src/Textarea.svelte"
+		},
+		"./Toast.svelte": {
+			"svelte": "./src/Toast.svelte",
+			"default": "./src/Toast.svelte"
+		},
+		"./ToastContainer.svelte": {
+			"svelte": "./src/ToastContainer.svelte",
+			"default": "./src/ToastContainer.svelte"
+		},
+		"./toast": {
+			"types": "./src/Toast.ts",
+			"default": "./src/Toast.ts"
+		},
+		"./Tooltip.svelte": {
+			"svelte": "./src/Tooltip.svelte",
+			"default": "./src/Tooltip.svelte"
+		},
+		"./package.json": "./package.json",
+		"./styles.css": "./src/styles.css",
+		"./types": {
+			"types": "./src/types.ts",
+			"default": "./src/types.ts"
+		}
+	},
+	"files": [
+		"src",
+		"!src/**/*.stories.svelte"
+	],
+	"name": "@aeonixdev/ui",
 	"packageManager": "bun@1.3.14",
-	"private": true,
+	"peerDependencies": {
+		"svelte": "5.56.4",
+		"tailwindcss": "4.3.2"
+	},
 	"scripts": {
-		"build-storybook": "bun run --cwd package build-storybook",
-		"build:dashboard": "bun run --cwd examples/dashboard build",
-		"check": "bun run --cwd package check",
-		"check:dashboard": "bun run --cwd examples/dashboard check",
-		"check:package": "bun pm pack --cwd package --dry-run --ignore-scripts",
+		"build-storybook": "storybook build",
+		"check": "svelte-check --tsconfig ./tsconfig.json",
+		"check:package": "bun pm pack --dry-run --ignore-scripts",
 		"format": "prettier --write . && biome check --write .",
 		"format:check": "prettier --check .",
 		"format:unsafe": "biome check --write --unsafe .",
 		"lint": "biome check .",
-		"storybook": "bun run --cwd package storybook"
+		"storybook": "storybook dev -p 21000 --no-open"
 	},
-	"workspaces": [
-		"examples/dashboard",
-		"package"
-	]
+	"sideEffects": [
+		"**/*.css"
+	],
+	"type": "module",
+	"version": "0.0.0-alpha.0"
 }

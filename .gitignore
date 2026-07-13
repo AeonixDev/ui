@@ -1,7 +1,6 @@
 node_modules
 dist
 storybook-static
-examples/dashboard/build
 .svelte-kit
 .vite
 .DS_Store
