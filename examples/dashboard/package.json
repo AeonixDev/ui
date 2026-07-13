@@ -1,6 +1,6 @@
 {
 	"dependencies": {
-		"@aeonixdev/ui": "file:../.."
+		"@aeonixdev/ui": "workspace:*"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-static": "3.0.10",

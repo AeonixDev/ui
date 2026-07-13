@@ -49,7 +49,7 @@ Import components through explicit entry points:
 <Button>Save</Button>
 ```
 
-Import shared component types through the explicit type entry point:
+If needed, shared component types (`Size`, `Variant`, etc) can be imported through the explicit type entry point:
 
 ```ts
 import type { Size, Variant } from "@aeonixdev/ui/types";
