@@ -2,7 +2,7 @@
 	import { cva } from "class-variance-authority";
 	import type { Snippet } from "svelte";
 	import { getContext } from "svelte";
-	import type { HTMLButtonAttributes } from "svelte/elements";
+	import type { HTMLAnchorAttributes, HTMLButtonAttributes } from "svelte/elements";
 	import { buttonGroupContextKey, type ButtonGroupContext } from "./ButtonGroup.js";
 	import type { Size, Variant } from "./types.js";
 
@@ -28,7 +28,7 @@
 	} satisfies Record<Size, string>;
 
 	const buttonVariants = cva(
-		"inline-flex items-center justify-center rounded-lg border-0 border-none font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50",
+		"inline-flex items-center justify-center rounded-lg border-0 border-none font-medium no-underline transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50",
 		{
 			defaultVariants: {
 				size: "md",
@@ -41,37 +41,78 @@
 		},
 	);
 
-	type NativeButtonProps = Omit<HTMLButtonAttributes, "class" | "type">;
-
-	export type ButtonProps = NativeButtonProps & {
+	type SharedButtonProps = {
 		children?: Snippet;
 		class?: string;
+		disabled?: boolean;
 		size?: Size;
-		type?: "button" | "submit" | "reset";
 		variant?: Variant;
 	};
+
+	export type ButtonElementProps = Omit<HTMLButtonAttributes, "class" | "disabled" | "type"> &
+		SharedButtonProps & {
+			as?: "button";
+			type?: "button" | "submit" | "reset";
+		};
+
+	export type ButtonLinkProps = Omit<HTMLAnchorAttributes, "aria-disabled" | "class" | "href"> &
+		SharedButtonProps & {
+			as: "a";
+			href: NonNullable<HTMLAnchorAttributes["href"]>;
+			type?: never;
+		};
+
+	export type ButtonProps = ButtonElementProps | ButtonLinkProps;
+	type NativeButtonProps = Omit<ButtonElementProps, "as" | "children" | "class" | "disabled" | "size" | "variant">;
+	type NativeButtonLinkProps = Omit<ButtonLinkProps, "as" | "children" | "class" | "disabled" | "size" | "variant">;
 </script>
 
 <script lang="ts">
 	const buttonGroup = getContext<ButtonGroupContext | undefined>(buttonGroupContextKey);
 
 	let {
+		as = "button",
 		children,
 		class: className = "",
 		disabled,
 		size = "md",
-		type = "button",
 		variant,
 		...restProps
 	}: ButtonProps = $props();
 
 	const effectiveVariant = $derived(variant ?? buttonGroup?.variant ?? "default");
-	const effectiveDisabled = $derived(buttonGroup?.disabled ?? disabled ?? false);
+	const effectiveDisabled = $derived(disabled ?? buttonGroup?.disabled ?? false);
 	const classes = $derived(buttonVariants({ class: className, size, variant: effectiveVariant }));
+	const buttonProps = $derived(restProps as NativeButtonProps);
+	const linkProps = $derived(restProps as NativeButtonLinkProps);
 </script>
 
-<button {...restProps} class={classes} disabled={effectiveDisabled} {type}>
-	{#if children}
-		{@render children()}
-	{/if}
-</button>
+{#if as === "a"}
+	<a
+		{...linkProps}
+		aria-disabled={effectiveDisabled ? true : undefined}
+		class={classes}
+		href={linkProps.href}
+		onclick={(event) => {
+			if (effectiveDisabled) {
+				event.preventDefault();
+				event.stopPropagation();
+
+				return;
+			}
+
+			linkProps.onclick?.(event);
+		}}
+		tabindex={effectiveDisabled ? -1 : linkProps.tabindex}
+	>
+		{#if children}
+			{@render children()}
+		{/if}
+	</a>
+{:else}
+	<button {...buttonProps} class={classes} disabled={effectiveDisabled} type={buttonProps.type ?? "button"}>
+		{#if children}
+			{@render children()}
+		{/if}
+	</button>
+{/if}

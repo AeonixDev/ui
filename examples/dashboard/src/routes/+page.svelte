@@ -169,6 +169,8 @@
 </script>
 
 <PageActions>
+	<Button as="a" href="/deployments">View deployments</Button>
+
 	<Button onclick={() => (showSkeletons = !showSkeletons)} variant="default">
 		{showSkeletons ? "Show metrics" : "Test loading"}
 	</Button>

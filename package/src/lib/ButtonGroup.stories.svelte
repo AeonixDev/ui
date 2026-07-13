@@ -92,3 +92,12 @@
 		</ButtonGroup>
 	{/snippet}
 </Story>
+
+<Story name="Mixed buttons and links">
+	{#snippet template(args: ButtonGroupStoryArgs)}
+		<ButtonGroup aria-label="Project actions" disabled={args.disabled} variant={args.variant}>
+			<Button>Refresh</Button>
+			<Button as="a" href="#project-details">View project</Button>
+		</ButtonGroup>
+	{/snippet}
+</Story>

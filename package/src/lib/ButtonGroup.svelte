@@ -28,13 +28,16 @@
 	};
 
 	setContext(buttonGroupContextKey, context);
-
-	const classes = $derived(
-		`inline-flex items-center [&>button:not(:first-child)]:rounded-l-none [&>button:not(:last-child)]:rounded-r-none [&>button+button]:ml-px${className ? ` ${className}` : ""}`,
-	);
 </script>
 
-<div {...restProps} class={classes} {role}>
+<div
+	{...restProps}
+	class={[
+		"inline-flex items-center [&>:not(:first-child)]:rounded-l-none [&>:not(:last-child)]:rounded-r-none [&>*+*]:ml-px",
+		className,
+	]}
+	{role}
+>
 	{#if children}
 		{@render children()}
 	{/if}

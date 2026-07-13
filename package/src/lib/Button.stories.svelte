@@ -6,20 +6,34 @@
 	type ButtonType = "button" | "submit" | "reset";
 
 	type ButtonStoryArgs = {
-		variant: Variant;
+		as: "a" | "button";
+		disabled: boolean;
+		href: string;
 		size: Size;
 		type: ButtonType;
-		disabled: boolean;
+		variant: Variant;
 	};
 
 	const { Story } = defineMeta({
 		args: {
+			as: "button",
 			disabled: false,
+			href: "#button-destination",
 			size: "md",
 			type: "button",
 			variant: "default",
 		},
 		argTypes: {
+			as: {
+				control: "inline-radio",
+				description: "Native element to render. Anchor mode requires href; button mode is the default.",
+				options: ["button", "a"],
+				table: {
+					category: "Behavior",
+					defaultValue: { summary: "'button'" },
+					type: { summary: "'button' | 'a'" },
+				},
+			},
 			disabled: {
 				control: "boolean",
 				description: "Prevents interaction and applies the disabled visual state.",
@@ -27,6 +41,14 @@
 					category: "Behavior",
 					defaultValue: { summary: "false" },
 					type: { summary: "boolean" },
+				},
+			},
+			href: {
+				control: "text",
+				description: "Required destination when as is 'a'; unavailable in button mode.",
+				table: {
+					category: "Behavior",
+					type: { summary: "string" },
 				},
 			},
 			size: {
@@ -62,12 +84,12 @@
 		},
 		parameters: {
 			controls: {
-				include: ["variant", "size", "type", "disabled"],
+				include: ["as", "variant", "size", "type", "href", "disabled"],
 			},
 			docs: {
 				description: {
 					component:
-						"A borderless button component. Use child content for the label and control visual treatment with shared Variant and Size values.",
+						"A borderless action component that renders a native button by default or a native anchor with as='a'. Its discriminated props expose only the native attributes applicable to the selected element.",
 				},
 			},
 		},
@@ -78,29 +100,21 @@
 </script>
 
 {#snippet template(args: ButtonStoryArgs)}
-	<Button variant={args.variant} size={args.size} type={args.type} disabled={args.disabled}>Button</Button>
+	{#if args.as === "a"}
+		<Button as="a" disabled={args.disabled} href={args.href} size={args.size} variant={args.variant}>
+			Button link
+		</Button>
+	{:else}
+		<Button disabled={args.disabled} size={args.size} type={args.type} variant={args.variant}>Button</Button>
+	{/if}
 {/snippet}
 
-<Story name="Default">
-	{#snippet template(args: ButtonStoryArgs)}
-		<Button variant={args.variant} size={args.size} type={args.type} disabled={args.disabled}>Default button</Button>
-	{/snippet}
-</Story>
+<Story name="Default" />
 
-<Story name="Primary" args={{ variant: "primary" }}>
-	{#snippet template(args: ButtonStoryArgs)}
-		<Button variant={args.variant} size={args.size} type={args.type} disabled={args.disabled}>Primary button</Button>
-	{/snippet}
-</Story>
+<Story name="Primary" args={{ variant: "primary" }} />
 
-<Story name="Secondary" args={{ variant: "secondary" }}>
-	{#snippet template(args: ButtonStoryArgs)}
-		<Button variant={args.variant} size={args.size} type={args.type} disabled={args.disabled}>Secondary button</Button>
-	{/snippet}
-</Story>
+<Story name="Secondary" args={{ variant: "secondary" }} />
 
-<Story name="Disabled" args={{ disabled: true }}>
-	{#snippet template(args: ButtonStoryArgs)}
-		<Button variant={args.variant} size={args.size} type={args.type} disabled={args.disabled}>Disabled button</Button>
-	{/snippet}
-</Story>
+<Story name="Link" args={{ as: "a", variant: "primary" }} />
+
+<Story name="Disabled" args={{ disabled: true }} />
