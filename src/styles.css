@@ -12,6 +12,7 @@
 @source "./Input.svelte";
 @source "./Kbd.svelte";
 @source "./Message.svelte";
+@source "./Modal.svelte";
 @source "./Nav.svelte";
 @source "./Nav.ts";
 @source "./NavGroup.svelte";

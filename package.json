@@ -74,6 +74,10 @@
 			"svelte": "./src/Message.svelte",
 			"default": "./src/Message.svelte"
 		},
+		"./Modal.svelte": {
+			"svelte": "./src/Modal.svelte",
+			"default": "./src/Modal.svelte"
+		},
 		"./Nav.svelte": {
 			"svelte": "./src/Nav.svelte",
 			"default": "./src/Nav.svelte"
