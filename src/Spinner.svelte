@@ -46,7 +46,7 @@
 				wave: "items-center justify-center gap-0.5",
 			},
 			variant: {
-				default: "text-foreground",
+				default: null,
 				error: "text-error",
 				info: "text-info",
 				primary: "text-primary",

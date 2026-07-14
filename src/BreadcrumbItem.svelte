@@ -78,7 +78,7 @@
 			{/if}
 		</span>
 	{:else}
-		<a {...linkProps} {href} class={[itemClasses, "breadcrumb-content text-current hover:underline"]}>
+		<a {...linkProps} {href} class={[itemClasses, "breadcrumb-content hover:underline"]}>
 			{#if children}
 				{@render children()}
 			{/if}

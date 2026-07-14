@@ -70,7 +70,7 @@
 
 <div class="w-full">
 	{#if showValue && normalizedValue !== undefined}
-		<div class="mb-1 flex justify-end text-xs text-current">
+		<div class="mb-1 flex justify-end text-xs">
 			{formatValue(normalizedValue, normalizedMax)}
 		</div>
 	{/if}

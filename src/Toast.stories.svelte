@@ -78,12 +78,12 @@
 <Story name="All positions">
 	{#snippet template(args: ToastStoryArgs)}
 		<div style="min-height: 48rem">
-			<p class="mx-auto max-w-md text-center text-sm text-foreground/70">
+			<p class="mx-auto max-w-md text-center text-sm opacity-70">
 				One context-backed ToastContainer groups notifications without overlapping adjacent regions.
 			</p>
 
 			<button
-				class="mx-auto mt-4 block rounded-lg bg-primary px-4 py-2 text-primary-foreground"
+				class="mx-auto mt-4 block rounded-lg bg-primary px-4 py-2 text-on-fill"
 				onclick={showAllPositions}
 				type="button"
 			>

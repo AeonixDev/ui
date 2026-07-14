@@ -8,17 +8,14 @@
 
 	const variantClasses = {
 		default:
-			"bg-foreground/10 text-foreground shadow-sm hover:bg-foreground/15 active:bg-foreground/20 focus-visible:ring-foreground/40",
-		error: "bg-error text-error-foreground shadow-sm hover:bg-error/90 active:bg-error/80 focus-visible:ring-error/40",
-		info: "bg-info text-info-foreground shadow-sm hover:bg-info/90 active:bg-info/80 focus-visible:ring-info/40",
-		primary:
-			"bg-primary text-primary-foreground shadow-sm hover:bg-primary/90 active:bg-primary/80 focus-visible:ring-primary/40",
+			"bg-foreground/10 shadow-sm hover:bg-foreground/15 active:bg-foreground/20 focus-visible:ring-foreground/40",
+		error: "bg-error text-on-fill shadow-sm hover:bg-error/90 active:bg-error/80 focus-visible:ring-error/40",
+		info: "bg-info text-on-fill shadow-sm hover:bg-info/90 active:bg-info/80 focus-visible:ring-info/40",
+		primary: "bg-primary text-on-fill shadow-sm hover:bg-primary/90 active:bg-primary/80 focus-visible:ring-primary/40",
 		secondary:
-			"bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/90 active:bg-secondary/80 focus-visible:ring-secondary/40",
-		success:
-			"bg-success text-success-foreground shadow-sm hover:bg-success/90 active:bg-success/80 focus-visible:ring-success/40",
-		warning:
-			"bg-warning text-warning-foreground shadow-sm hover:bg-warning/90 active:bg-warning/80 focus-visible:ring-warning/40",
+			"bg-secondary text-on-fill shadow-sm hover:bg-secondary/90 active:bg-secondary/80 focus-visible:ring-secondary/40",
+		success: "bg-success text-on-fill shadow-sm hover:bg-success/90 active:bg-success/80 focus-visible:ring-success/40",
+		warning: "bg-warning text-on-fill shadow-sm hover:bg-warning/90 active:bg-warning/80 focus-visible:ring-warning/40",
 	} satisfies Record<Variant, string>;
 
 	const sizeClasses = {

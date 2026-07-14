@@ -33,21 +33,15 @@
 
 @theme {
 	--color-primary: #003366;
-	--color-primary-foreground: #ffffff;
 	--color-secondary: #8a5a2b;
-	--color-secondary-foreground: #ffffff;
 	--color-error: #b42318;
-	--color-error-foreground: #ffffff;
 	--color-info: #175cd3;
-	--color-info-foreground: #ffffff;
 	--color-success: #067647;
-	--color-success-foreground: #ffffff;
 	--color-warning: #b54708;
-	--color-warning-foreground: #ffffff;
+	--color-on-fill: #ffffff;
 	--color-background: #f8fafc;
 	--color-foreground: #0f172a;
 	--color-surface: #ffffff;
-	--color-surface-foreground: #0f172a;
 }
 
 :root {
@@ -61,5 +55,4 @@
 	--color-background: #020617;
 	--color-foreground: #f8fafc;
 	--color-surface: #0f172a;
-	--color-surface-foreground: #f8fafc;
 }

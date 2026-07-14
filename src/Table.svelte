@@ -190,47 +190,41 @@
 
 	.table.variant-primary {
 		--table-accent: var(--color-primary);
-		--table-accent-foreground: var(--color-primary-foreground);
 	}
 
 	.table.variant-secondary {
 		--table-accent: var(--color-secondary);
-		--table-accent-foreground: var(--color-secondary-foreground);
 	}
 
 	.table.variant-error {
 		--table-accent: var(--color-error);
-		--table-accent-foreground: var(--color-error-foreground);
 	}
 
 	.table.variant-info {
 		--table-accent: var(--color-info);
-		--table-accent-foreground: var(--color-info-foreground);
 	}
 
 	.table.variant-success {
 		--table-accent: var(--color-success);
-		--table-accent-foreground: var(--color-success-foreground);
 	}
 
 	.table.variant-warning {
 		--table-accent: var(--color-warning);
-		--table-accent-foreground: var(--color-warning-foreground);
 	}
 
 	.table:not(.variant-default) {
-		--table-border: color-mix(in srgb, var(--table-accent-foreground) 20%, transparent);
+		--table-border: color-mix(in srgb, var(--color-on-fill) 20%, transparent);
 		--table-base: var(--table-accent);
-		--table-caption: color-mix(in srgb, var(--table-accent) 72%, var(--table-accent-foreground));
-		--table-header: color-mix(in srgb, var(--table-accent) 82%, var(--table-accent-foreground));
-		--table-hover: color-mix(in srgb, var(--table-accent) 75%, var(--table-accent-foreground));
+		--table-caption: color-mix(in srgb, var(--table-accent) 72%, var(--color-on-fill));
+		--table-header: color-mix(in srgb, var(--table-accent) 82%, var(--color-on-fill));
+		--table-hover: color-mix(in srgb, var(--table-accent) 75%, var(--color-on-fill));
 		--table-row: var(--table-accent);
-		--table-stripe: color-mix(in srgb, var(--table-accent) 85%, var(--table-accent-foreground));
-		--table-text: var(--table-accent-foreground);
+		--table-stripe: color-mix(in srgb, var(--table-accent) 85%, var(--color-on-fill));
+		--table-text: var(--color-on-fill);
 	}
 
 	.table.variant-primary {
-		--table-stripe: color-mix(in srgb, var(--table-accent) 75%, var(--table-accent-foreground));
+		--table-stripe: color-mix(in srgb, var(--table-accent) 75%, var(--color-on-fill));
 	}
 
 	.table :global(caption) {

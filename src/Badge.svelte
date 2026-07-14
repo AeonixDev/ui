@@ -5,13 +5,13 @@
 	import type { Size, Variant } from "./types.js";
 
 	const variantClasses = {
-		default: "bg-foreground/10 text-foreground shadow-sm",
-		error: "bg-error text-error-foreground",
-		info: "bg-info text-info-foreground",
-		primary: "bg-primary text-primary-foreground",
-		secondary: "bg-secondary text-secondary-foreground",
-		success: "bg-success text-success-foreground",
-		warning: "bg-warning text-warning-foreground",
+		default: "bg-foreground/10 shadow-sm",
+		error: "bg-error text-on-fill",
+		info: "bg-info text-on-fill",
+		primary: "bg-primary text-on-fill",
+		secondary: "bg-secondary text-on-fill",
+		success: "bg-success text-on-fill",
+		warning: "bg-warning text-on-fill",
 	} satisfies Record<Variant, string>;
 
 	const sizeClasses = {

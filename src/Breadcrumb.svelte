@@ -37,7 +37,7 @@
 				wrapped: "rounded-lg border border-current/15 bg-current/5 px-4 py-3 shadow-sm",
 			},
 			variant: {
-				default: "text-foreground",
+				default: null,
 				error: "text-error",
 				info: "text-info",
 				primary: "text-primary",

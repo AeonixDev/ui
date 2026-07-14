@@ -16,11 +16,9 @@ const preview: Preview = {
 
 				const styles = getComputedStyle(root);
 				const background = styles.getPropertyValue("--color-background").trim();
-				const foreground = styles.getPropertyValue("--color-foreground").trim();
 
 				root.style.backgroundColor = background;
 				body.style.backgroundColor = background;
-				body.style.color = foreground;
 			}
 
 			return Story();

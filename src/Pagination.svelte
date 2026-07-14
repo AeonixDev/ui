@@ -25,18 +25,18 @@
 		{
 			compoundVariants: [
 				{ active: true, class: "bg-foreground text-background focus-visible:ring-foreground/40", variant: "default" },
-				{ active: true, class: "bg-error text-error-foreground focus-visible:ring-error/40", variant: "error" },
-				{ active: true, class: "bg-info text-info-foreground focus-visible:ring-info/40", variant: "info" },
-				{ active: true, class: "bg-primary text-primary-foreground focus-visible:ring-primary/40", variant: "primary" },
+				{ active: true, class: "bg-error text-on-fill focus-visible:ring-error/40", variant: "error" },
+				{ active: true, class: "bg-info text-on-fill focus-visible:ring-info/40", variant: "info" },
+				{ active: true, class: "bg-primary text-on-fill focus-visible:ring-primary/40", variant: "primary" },
 				{
 					active: true,
-					class: "bg-secondary text-secondary-foreground focus-visible:ring-secondary/40",
+					class: "bg-secondary text-on-fill focus-visible:ring-secondary/40",
 					variant: "secondary",
 				},
-				{ active: true, class: "bg-success text-success-foreground focus-visible:ring-success/40", variant: "success" },
-				{ active: true, class: "bg-warning text-warning-foreground focus-visible:ring-warning/40", variant: "warning" },
+				{ active: true, class: "bg-success text-on-fill focus-visible:ring-success/40", variant: "success" },
+				{ active: true, class: "bg-warning text-on-fill focus-visible:ring-warning/40", variant: "warning" },
 				{ active: false, class: "bg-transparent!", type: ["ghost", "underlined"] },
-				{ active: true, class: "bg-transparent! text-foreground!", type: "underlined", variant: "default" },
+				{ active: true, class: "bg-transparent!", type: "underlined", variant: "default" },
 				{ active: true, class: "bg-transparent! text-error!", type: "underlined", variant: "error" },
 				{ active: true, class: "bg-transparent! text-info!", type: "underlined", variant: "info" },
 				{ active: true, class: "bg-transparent! text-primary!", type: "underlined", variant: "primary" },
@@ -47,7 +47,7 @@
 			defaultVariants: { active: false, size: "md", type: "default", variant: "default" },
 			variants: {
 				active: {
-					false: "bg-foreground/10 text-foreground hover:bg-foreground/15",
+					false: "bg-foreground/10 hover:bg-foreground/15",
 					true: null,
 				},
 				size: {
@@ -182,7 +182,7 @@
 		{#each range as item}
 			<li>
 				{#if item === "ellipsis"}
-					<span aria-hidden="true" class="inline-flex min-w-6 justify-center text-foreground/60">…</span>
+					<span aria-hidden="true" class="inline-flex min-w-6 justify-center opacity-60">…</span>
 				{:else if getHref}
 					<a
 						aria-current={item === normalizedPage ? "page" : undefined}

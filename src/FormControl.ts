@@ -4,7 +4,7 @@ export const formControlVariants = cva(
 	[
 		"box-border max-w-full rounded-lg",
 		"border border-foreground/20 bg-surface shadow-sm",
-		"text-sm text-surface-foreground transition-colors",
+		"text-foreground text-sm transition-colors",
 		"disabled:cursor-not-allowed disabled:opacity-50",
 	],
 	{
